@@ -5,13 +5,15 @@ body {
 }
 
 #main {
-    width: 500px;
+    width: 75%;
     margin: auto;
     text-align: left;
     background: white;
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    font-family: sans-serif; 
+    color: #222;
 }
 
 #main h1 {
