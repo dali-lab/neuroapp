@@ -1,0 +1,113 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>NeuroApp</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+</head>
+
+<body>
+  
+  <div id="main">
+    <h1>NeuroApp</h1>
+
+
+
+    <div>
+      <form action="" method="get">
+        <h4>Check all symptoms that are present (Coma).</h4>
+        
+        <input type="checkbox" name="gender" value="contusion"> Contusion<br>
+ 		<input type="checkbox" name="gender" value="vasodilation"> Vasodilation<br>
+  		<input type="checkbox" name="gender" value="rigidNeck"> Rigid Neck<br>
+  		<input type="checkbox" name="gender" value="enlargedThyroid"> Enlarged Thyroid<br>
+  		<input type="checkbox" name="gender" value="chemoisis"> Chemoisis<br>
+  		<input type="checkbox" name="gender" value="periorbitalEcchymosis"> Periorbital Ecchymosis<br>
+  		<input type="checkbox" name="gender" value="subhyaloidBlood"> Subhyaloid Blood<br>
+  		<input type="checkbox" name="gender" value="vasospasm"> Vasospasm<br>
+  		<input type="checkbox" name="gender" value="retinalHemorrhages"> Retinal Hemorrhages<br>
+  		<input type="checkbox" name="gender" value="hemorrhage"> Hemorrhage<br>
+  		<input type="checkbox" name="gender" value="otitisMedia"> Otitis Media<br>
+  		<input type="checkbox" name="gender" value="spinalFluidRhinorrhea"> Spinal Fluid Rhinorrhea<br>
+  		<input type="checkbox" name="gender" value="scarredTongue"> Scarred Tongue<br>
+  		<input type="checkbox" name="gender" value="pigmentation"> Pigmentation<br>
+  		<input type="checkbox" name="gender" value="leadLines"> Lead Lines<br>
+  		<input type="checkbox" name="gender" value="acetoneOdor"> Acetone Odor<br>
+  		<input type="checkbox" name="gender" value="alcoholOdor"> Alcohol Odor<br>
+  		<input type="checkbox" name="gender" value="almondOdor"> Almond Odor<br>
+  		<input type="checkbox" name="gender" value="cabbageOdor"> Cabbage Odor<br>
+  		<input type="checkbox" name="gender" value="feculentOdor"> Feculent Odor<br>
+  		<input type="checkbox" name="gender" value="fishyOdor"> Fishy Odor<br>
+  		<input type="checkbox" name="gender" value="fruityOdor"> Fruity Odor<br>
+  		<input type="checkbox" name="gender" value="garlicOdor"> Garlic Odor<br>
+  		<input type="checkbox" name="gender" value="hopsOdor"> Hops Odor<br>
+  		<input type="checkbox" name="gender" value="mapleSyrupOdor"> Maple Syrup Odor<br>
+  		<input type="checkbox" name="gender" value="mouseUrineOdor"> Mouse Urine Odor<br>
+  		<input type="checkbox" name="gender" value="mustyOdor"> Musty Odor<br>
+  		<input type="checkbox" name="gender" value="sweatyFeetOdor"> Sweaty Feet Odor<br>
+  		<input type="checkbox" name="gender" value="swimmingPoolOdor"> Swimming Pool Odor<br>
+  		<input type="checkbox" name="gender" value="tomcatUrineOdor"> Tomcat Urine Odor<br>
+  		<input type="checkbox" name="gender" value="uremiaOdor"> Uremia Odor<br>
+  		<input type="checkbox" name="gender" value="heartMurmur"> Heart Murmur<br>
+  		<input type="checkbox" name="gender" value="rales"> Rales<br>
+  		<input type="checkbox" name="gender" value="vomiting"> Vomiting<br>
+  		<input type="checkbox" name="gender" value="fracturedLimbs"> Fractured Limbs<br>
+  		<input type="checkbox" name="gender" value="ecchymosis"> Ecchymosis<br>
+  		<input type="checkbox" name="gender" value="ashLeafSpots"> Ash Leaf Spots<br>
+  		<input type="checkbox" name="gender" value="butterflyRash"> Butterfly Rash<br>
+  		<input type="checkbox" name="gender" value="cafeAuLait"> Café au Lait<br>
+  		<input type="checkbox" name="gender" value="cyanosis"> Cyanosis<br>
+  		<input type="checkbox" name="gender" value="desquamation"> Desquamation<br>
+  		<input type="checkbox" name="gender" value="drySkin"> Dry Skin<br>
+  		<input type="checkbox" name="gender" value="erythema"> Erythema<br>
+  		<input type="checkbox" name="gender" value="periungualFibroma"> Periungual Fibroma<br>
+  		<input type="checkbox" name="gender" value="petechiaePurpura"> Petechiae Purpura<br>
+  		<input type="checkbox" name="gender" value="hyperpigmentation"> Hyperpigmentation<br>
+  		<input type="checkbox" name="gender" value="splinterHemorrhages"> Splinter Hemorrhages<br>
+  		<input type="checkbox" name="gender" value="uremicFrost"> Uremic Frost<br>
+  		<input type="checkbox" name="gender" value="wet"> Wet<br>
+  		<input type="checkbox" name="gender" value="needleTracks"> Needle Tracks<br>
+
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+    <div style="display:none" class="error">
+      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="code">
+      <p>Form</p>
+      
+        <code>
+          var TestObject = Parse.Object.extend("TestObject");<br/>
+          var testObject = new TestObject();<br/>
+          testObject.save({foo: "bar"});
+        </code>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    Parse.initialize("J10juAzZQ4pGqAdRWxv2Dr2vECRwMG4ryeoBMMz2", "9nLPswh1XMUUowxG9qD5XwRQKPoiZHyRGZr0hIkR");
+    
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+      testObject.save({foo: "bar"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+  </script>
+</body>
+
+</html>
