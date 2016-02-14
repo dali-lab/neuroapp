@@ -17,22 +17,37 @@
     <div id="header">
       <h1>NeuroApp</h1>
 
-       <p>Welcome to NeuroApp!</p>
     </div>
 
     <div id="firstQuestions">
+       <p>Welcome to NeuroApp!</p>
+
         <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>
     
 
           <form action="" method="get" >
             <h4>Does the patient warrant neurometabolic diagnostic evaluation?</h4>
-            <input type="checkbox" name="symptom" value=""> Common diagnostic cause of symptoms NOT confirmed.<br>
-            <input type="checkbox" name="symptom" value=""> Common diagnostic cause of symptoms confirmed BUT extenuating or unusual features ARE present.<br>
-            <input type="submit" value="Submit" onClick="advanceToSecondQuestions()">
+            <input type="checkbox" name="symptom" id="check" value=""> Common diagnostic cause of symptoms NOT confirmed.<br>
+            <input type="checkbox" name="symptom" id="check" value=""> Common diagnostic cause of symptoms confirmed BUT extenuating or unusual features ARE present.<br>
+            <input type="submit" value="Submit" onClick="checkIfApplicable()">
         </form>
     </div>
 
-    <div id="secondQuestions">
+    <div id="notApplicable" class="notFirst">
+      <h3>Given your answers, we advise against taking this test.</h3>
+      <form>
+      <input type="button" value="Continue" onClick="advanceToSecondQuestions()">
+    </form>
+    </div>
+
+    <div id="applicable" class="notFirst">
+      <h3>You might have a neurometabolic disease. Continue though the questions to narrow down which one you might have!</h3>
+      <form>
+      <input type="button" value="Continue" onClick="advanceToSecondQuestions()">
+    </form>
+    </div>
+
+    <div id="secondQuestions" class="notFirst">
       <form action="" method="get">
         <h4>Please enter the patient's age.</h4>
         <select name="age">
