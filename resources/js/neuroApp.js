@@ -8,6 +8,6 @@ $(document).ready(function(){
 
 function advanceToSecondQuestions() {
 	$('#firstQuestions').fadeOut();
-	$('#secondQuestions').delay(750).fadeIn();
+	$('#secondQuestions').delay(500).fadeIn();
 	event.preventDefault();
 }
