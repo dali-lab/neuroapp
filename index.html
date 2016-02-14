@@ -14,13 +14,15 @@
 <body>
   
   <div id="main">
-    <h1>NeuroApp</h1>
+    <div id="header">
+      <h1>NeuroApp</h1>
 
-    <p>Welcome to NeuroApp!</p>
-
-    <div>
-        <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>
+       <p>Welcome to NeuroApp!</p>
     </div>
+
+    <div id="firstQuestions">
+        <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>
+    
 
           <form action="" method="get">
             <h4>Does the patient warrant neurometabolic diagnostic evaluation?</h4>
@@ -28,8 +30,40 @@
             <input type="checkbox" name="symptom" value=""> Common diagnostic cause of symptoms confirmed BUT extenuating or unusual features ARE present.<br>
             <input type="submit" value="Submit">
         </form>
+    </div>
+
+    <div id="secondQuestions">
+      <form action="" method="get">
+        <h4>Please enter the patient's age.</h4>
+        <select name="age">
+          <option value="newborn">Newborn (0-1 month)</option>
+          <option value="infant">Infant (1 month - 1 year)</option>
+          <option value="toddler">Toddler (1-5 years)</option>
+          <option value="childhood">Childhood (5-12 years)</option>
+          <option value="adolescent">Adolescent (12-18 years)</option>        
+          <option value="adult">Adult (18+)</option>
+        </select>
+
+        <h4>Select the sex of the patient.</h4>
+        <select name="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <h4>Is the patient in a coma?</h4>
+        <select name="coma">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
 
   </div>
+
+  
 
 </body>
 

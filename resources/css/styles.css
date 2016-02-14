@@ -40,3 +40,7 @@ body {
     color: green;
     line-height: 13px;
 }
+
+#secondQuestions {
+    display: none;
+}
