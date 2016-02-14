@@ -23,3 +23,9 @@ function advanceToSecondQuestions() {
 	$('#secondQuestions').delay(500).fadeIn();
 	event.preventDefault();
 }
+
+function advanceToThirdQuestions() {
+	$('#secondQuestions').fadeOut();
+	$('#thirdQuestions').delay(500).fadeIn();
+	event.preventDefault();
+}
