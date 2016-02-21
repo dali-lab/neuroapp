@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 function checkIfApplicable() {
 	$('#firstQuestions').fadeOut();
-	if ($("#check").attr('checked')){
+	if ($("#check1").attr('checked') || $("#check2").attr('checked')){
 		$("#applicable").delay(500).fadeIn();
 	}
 	else{
