@@ -32,7 +32,6 @@ function advanceToThirdQuestions() {
 		event.preventDefault();
 	}else{
 		$('#secondQuestions').fadeOut();
-		$('#error').fadeIn();
 		$('#error').fadeOut();
 		$('#thirdQuestions').delay(500).fadeIn();
 		event.preventDefault();
