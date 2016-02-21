@@ -1,4 +1,6 @@
-//notes
+var hyperammonemia = false;
+var hypoglycemia = false;
+
 $(document).ready(function(){
 	$("#firstQuestions").fadeIn();
 	$('.notFirst').hide();
@@ -31,6 +33,23 @@ function advanceToThirdQuestions() {
 }
 
 function advanceToFourthQuestions() {
+	if ($("#growthFailure").attr('checked')){
+		hyperammonemia = true;
+		hypoglycemia = true;
+	} 
+	if ($("#hepatomegaly").attr('checked')){
+		hyperammonemia = true;
+	}
+	if ($("#spasticity").attr('checked')){
+		hypoglycemia = true;
+	}
+	if ($("#neuropathy").attr('checked')){
+		hypoglycemia = true;
+	}
+	if ($("#myopathyCardiomyopathy").attr('checked')){
+		hypoglycemia = true;
+		hyperammonemia = true;
+	}
 	if ($("#coma").val() == "yes"){
 		$('#thirdQuestions').fadeOut();
 		$('#fourthQuestions').delay(500).fadeIn();
