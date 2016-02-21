@@ -25,9 +25,16 @@ function advanceToSecondQuestions() {
 }
 
 function advanceToThirdQuestions() {
-	$('#secondQuestions').fadeOut();
-	$('#thirdQuestions').delay(500).fadeIn();
-	event.preventDefault();
+	if ($('#age').val() == "none" || $('#sex').val() == "none"){
+		$('#error').delay(500).fadeIn();
+		event.preventDefault();
+	}else{
+		$('#secondQuestions').fadeOut();
+		$('#error').fadeIn();
+		$('#error').fadeOut();
+		$('#thirdQuestions').delay(500).fadeIn();
+		event.preventDefault();
+	}
 }
 
 function advanceToFourthQuestions() {

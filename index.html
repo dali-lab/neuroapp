@@ -50,7 +50,8 @@
     <div id="secondQuestions" class="notFirst">
       <form action="" method="get">
         <h4>Please enter the patient's age.</h4>
-        <select name="age">
+        <select id="age" name="age">
+          <option value="none" selected> -- select an option -- </option>
           <option value="newborn">Newborn (0-1 month)</option>
           <option value="infant">Infant (1 month - 1 year)</option>
           <option value="toddler">Toddler (1-5 years)</option>
@@ -60,7 +61,8 @@
         </select>
 
         <h4>Select the sex of the patient.</h4>
-        <select name="sex">
+        <select name="sex" id="sex">
+          <option value="none" selected> -- select an option -- </option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
@@ -69,6 +71,11 @@
         <input type="submit" value="Submit" onClick="advanceToThirdQuestions()">
       </form>
     </div>
+
+    <div id="error" class="notFirst">
+    <h4 color="red">Please select a value.</h4>
+    </div>
+
 
     <div id="thirdQuestions" class="notFirst">
       
