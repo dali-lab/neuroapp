@@ -31,7 +31,9 @@ function advanceToThirdQuestions() {
 }
 
 function advanceToFourthQuestions() {
-	$('#thirdQuestions').fadeOut();
-	$('#fourthQuestions').delay(500).fadeIn();
-	event.preventDefault();
+	if ($("#coma").val() == "yes"){
+		$('#thirdQuestions').fadeOut();
+		$('#fourthQuestions').delay(500).fadeIn();
+		event.preventDefault();
+	}
 }

@@ -65,12 +65,6 @@
           <option value="female">Female</option>
         </select>
 
-        <h4>Is the patient in a coma?</h4>
-        <select name="coma">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-
         <br><br>
         <input type="submit" value="Submit" onClick="advanceToThirdQuestions()">
       </form>
@@ -112,12 +106,12 @@
         <input type="checkbox" name="gender" value="neuropathy"> Neuropathy<br>
         <input type="checkbox" name="gender" value="myopathyCardiomyopathy"> Myopathy/Cardiomyopathy<br>
         <input type="checkbox" name="gender" value="absentCorpusCallosum"> Absent Corpus Callosum"<br>
-        <br><br><br>
                 <h4>Is the patient in a coma?</h4>
-        <select name="coma">
+        <select name="coma" id="coma">
+          <option value="no" >No</option>
           <option value="yes">Yes</option>
-          <option value="no">No</option>
         </select>
+<br><br>
         <input type="submit" value="Submit" onClick="advanceToFourthQuestions()">
       </form>
     </div>
