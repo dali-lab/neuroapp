@@ -112,8 +112,13 @@
         <input type="checkbox" name="gender" value="neuropathy"> Neuropathy<br>
         <input type="checkbox" name="gender" value="myopathyCardiomyopathy"> Myopathy/Cardiomyopathy<br>
         <input type="checkbox" name="gender" value="absentCorpusCallosum"> Absent Corpus Callosum"<br>
-        <br><br>
-        <input type="submit" value="Submit">
+        <br><br><br>
+                <h4>Is the patient in a coma?</h4>
+        <select name="coma">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <input type="submit" value="Submit" onClick="advanceToFourthQuestions()">
       </form>
     </div>
     </div> 
