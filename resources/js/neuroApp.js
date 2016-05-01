@@ -66,3 +66,11 @@ function advanceToFourthQuestions() {
 		event.preventDefault();
 	}
 }
+
+function advanceToFourthFromComa() {
+	if (hypoglycemia === true) {
+		$('#fourthQuestions').fadeOut();
+		$('#fifthQuestions').delay(500).fadeIn();
+		event.preventDefault();
+	}
+}
