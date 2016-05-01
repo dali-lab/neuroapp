@@ -60,5 +60,9 @@ function advanceToFourthQuestions() {
 		$('#thirdQuestions').fadeOut();
 		$('#fourthQuestions').delay(500).fadeIn();
 		event.preventDefault();
+	} else if (hypoglycemia === true) {
+		$('#thirdQuestions').fadeOut();
+		$('#fifthQuestions').delay(500).fadeIn();
+		event.preventDefault();
 	}
 }
