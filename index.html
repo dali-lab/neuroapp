@@ -314,7 +314,7 @@
     <h2> Urinalysis</h2>
     <form> Urine ketones
       <input type="radio" name="uketones" value="high"> High
-      <input type="radio" name="uketones"  value="low"> Low
+      <input type="radio" name="uketones"  id="low_ketones" value="low"> Low
       <input type="radio" name="uketones"  value="normal"> Normal
       <input type="radio" name="uketones"  value="incomplete" checked> Incomplete
     </form>
@@ -391,43 +391,43 @@
       <form action="" method="get">
         <h4>Check all symptoms that are present (Low Glucose or Growth failure, cardiomyopathy, spasticity, or neuropathy).</h4>
         
-      <input type="checkbox" name="gender" value="seizures"> Seizures<br>
-      <input type="checkbox" name="gender" value="Heart Failure"> Heart Failure<br>
-      <input type="checkbox" name="gender" value="retinalAbnormalities"> Retinal Abnormalities<br>
-      <input type="checkbox" name="gender" value="muscleWeakness"> Muscle weakness<br>
-      <input type="checkbox" name="gender" value="rhabdomyolysis">Rhabdomyolysis<br>
-      <input type="checkbox" name="gender" value="myoglobinuria"> Myoglobinuria<br>
-      <input type="checkbox" name="gender" value="reyeSyndrome">Reye Syndrome<br>
-      <input type="checkbox" name="gender" value="hypotonia"> Hypotonia<br>
-      <input type="checkbox" name="gender" value="liverDisease"> Liver disease<br>
-      <input type="checkbox" name="gender" value="stupor"> Stupor<br>
-      <input type="checkbox" name="gender" value="cardiacDysrhythmia"> Cardiac Dysrhythmia<br>
-      <input type="checkbox" name="gender" value="convulsions"> Convulsions<br>
-      <input type="checkbox" name="gender" value="abnormalInvoluntaryMovements"> Abnormal involuntary movements<br>
-      <input type="checkbox" name="gender" value="brainAtrophy"> Brain atrophy on MRI<br>
-      <input type="checkbox" name="gender" value="hyperventilation"> Hyperventilation<br>
-      <input type="checkbox" name="gender" value="cerebralAtrophy"> Cerebral atrophy on MRI<br>
-      <input type="checkbox" name="gender" value="cerebellarAtrophy"> Cerebellar atrophy on MRI<br>
-      <input type="checkbox" name="gender" value="retinalPallor"> Retinal pallor<br>
-      <input type="checkbox" name="gender" value="poorTemperatureRegulation"> Poor temperature regulation<br>
-      <input type="checkbox" name="gender" value="lowBloodPressure"> Low blood pressure<br>
-      <input type="checkbox" name="gender" value="smallBodySize"> Small body size<br>
-      <input type="checkbox" name="gender" value="shortStature"> Short stature<br>
-      <input type="checkbox" name="gender" value="abnormalPituitary">Abnormal pituitary on brain MRI<br>
-      <input type="checkbox" name="gender" value="muscleCramps"> Muscle cramps<br>
-      <input type="checkbox" name="gender" value="pompeDisease"> Short PR interval in EKG (Pompe disease)<br>
-      <input type="checkbox" name="gender" value="neurologicalAbnormalities"> Neurological abnormalities<br>
-      <input type="checkbox" name="gender" value="foodAversion"> Food aversion (to fruit)  <br>
-      <input type="checkbox" name="gender" value="nausea"> Nausea<br>
-      <input type="checkbox" name="gender" value="largeSpleen"> Large Spleen<br>
-      <input type="checkbox" name="gender" value="seizuresAfterFeedings"> Seizures after feedings with milk<br>
-      <input type="checkbox" name="gender" value="cerebralHemorrhagesAfterFeeding"> Cerebral hemorrhages after feedings with milk<br>
-      <input type="checkbox" name="gender" value="bruising"> Bruising<br>
-      <input type="checkbox" name="gender" value="rickets"> Rickets<br>
-      <input type="checkbox" name="gender" value="severeInfections"> Severe infections<br>
-      <input type="checkbox" name="gender" value="sepsis"> Sepsis<br>
-      <input type="checkbox" name="gender" value="liverTumors"> Liver tumors (hepatocellular carcinoma)<br>
-      <input type="checkbox" name="gender" value="cognitiveDelay"> Cognitive delay<br>
+      <input type="checkbox" name="gender" id="seizures"> Seizures<br>
+      <input type="checkbox" name="gender" id="Heart Failure"> Heart Failure<br>
+      <input type="checkbox" name="gender" id="retinalAbnormalities"> Retinal Abnormalities<br>
+      <input type="checkbox" name="gender" id="muscleWeakness"> Muscle weakness<br>
+      <input type="checkbox" name="gender" id="rhabdomyolysis">Rhabdomyolysis<br>
+      <input type="checkbox" name="gender" id="myoglobinuria"> Myoglobinuria<br>
+      <input type="checkbox" name="gender" id="reyeSyndrome">Reye Syndrome<br>
+      <input type="checkbox" name="gender" id="hypotonia"> Hypotonia<br>
+      <input type="checkbox" name="gender" id="liverDisease"> Liver disease<br>
+      <input type="checkbox" name="gender" id="stupor"> Stupor<br>
+      <input type="checkbox" name="gender" id="cardiacDysrhythmia"> Cardiac Dysrhythmia<br>
+      <input type="checkbox" name="gender" id="convulsions"> Convulsions<br>
+      <input type="checkbox" name="gender" id="abnormalInvoluntaryMovements"> Abnormal involuntary movements<br>
+      <input type="checkbox" name="gender" id="brainAtrophy"> Brain atrophy on MRI<br>
+      <input type="checkbox" name="gender" id="hyperventilation"> Hyperventilation<br>
+      <input type="checkbox" name="gender" id="cerebralAtrophy"> Cerebral atrophy on MRI<br>
+      <input type="checkbox" name="gender" id="cerebellarAtrophy"> Cerebellar atrophy on MRI<br>
+      <input type="checkbox" name="gender" id="retinalPallor"> Retinal pallor<br>
+      <input type="checkbox" name="gender" id="poorTemperatureRegulation"> Poor temperature regulation<br>
+      <input type="checkbox" name="gender" id="lowBloodPressure"> Low blood pressure<br>
+      <input type="checkbox" name="gender" id="smallBodySize"> Small body size<br>
+      <input type="checkbox" name="gender" id="shortStature"> Short stature<br>
+      <input type="checkbox" name="gender" id="abnormalPituitary">Abnormal pituitary on brain MRI<br>
+      <input type="checkbox" name="gender" id="muscleCramps"> Muscle cramps<br>
+      <input type="checkbox" name="gender" id="pompeDisease"> Short PR interval in EKG (Pompe disease)<br>
+      <input type="checkbox" name="gender" id="neurologicalAbnormalities"> Neurological abnormalities<br>
+      <input type="checkbox" name="gender" id="foodAversion"> Food aversion (to fruit)  <br>
+      <input type="checkbox" name="gender" id="nausea"> Nausea<br>
+      <input type="checkbox" name="gender" id="largeSpleen"> Large Spleen<br>
+      <input type="checkbox" name="gender" id="seizuresAfterFeedings"> Seizures after feedings with milk<br>
+      <input type="checkbox" name="gender" id="cerebralHemorrhagesAfterFeeding"> Cerebral hemorrhages after feedings with milk<br>
+      <input type="checkbox" name="gender" id="bruising"> Bruising<br>
+      <input type="checkbox" name="gender" id="rickets"> Rickets<br>
+      <input type="checkbox" name="gender" id="severeInfections"> Severe infections<br>
+      <input type="checkbox" name="gender" id="sepsis"> Sepsis<br>
+      <input type="checkbox" name="gender" id="liverTumors"> Liver tumors (hepatocellular carcinoma)<br>
+      <input type="checkbox" name="gender" id="cognitiveDelay"> Cognitive delay<br>
         <br>
         <input type="submit" value="Submit">
       </form>
