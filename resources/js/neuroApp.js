@@ -38,6 +38,7 @@ function advanceToThirdQuestions() {
 		if ($('#age').val() == "childhood") age = 4;
 		if ($('#age').val() == "adolescent") age = 5;
 		if ($('#age').val() == "adult") age = 6;
+		alert(age)
 		$('#secondQuestions').fadeOut();
 		$('#error').fadeOut();
 		$('#thirdQuestions').delay(500).fadeIn();
@@ -94,11 +95,11 @@ function rankDiseases() {
 		alert(fattyAcidOxidationDisordera());
 }
 
-function fattyAcidOxidationDisordera() {
+function fattyAcidOxidationDisorder() {
 	rank = 0;
 
 	//Check age requirement
-		if (age > 0){
+		if (age < 1){
 		return -2;
 	} 
 
@@ -116,5 +117,12 @@ function fattyAcidOxidationDisordera() {
 	if ($("#muscleWeakness").attr('checked')) rank+=1;
 	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
 	if ($("#myoglobinuria").attr('checked')) rank+=1;
+	if ($("#reyeSyndrome").attr('checked')) rank+=1;
+	if ($("#high_ammonia").prop("checked")) rank+=1;
+	return rank;
+}
+
+function carnitineTransporterDeficiency () {
+	rank = 0;
 	return rank;
 }
