@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>NeuroApp</title>
+  <title>DartDiagnose</title>
   <meta name="description" content="NeuroApp">
   <meta name="viewport" content="width=device-width">
   
@@ -20,7 +20,6 @@
     </div>
 
     <div id="firstQuestions">
-       <p>Welcome to NeuroApp!</p>
 
         <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>
     
@@ -312,7 +311,7 @@
       <input type="radio" name="platelets"  value="incomplete" checked> Incomplete
     </form>
     <h2> Urinalysis</h2>
-    <form> Urine ketones
+    <form id="urineKetones"> Urine ketones
       <input type="radio" name="uketones" value="high"> High
       <input type="radio" name="uketones"  id="low_ketones" value="low"> Low
       <input type="radio" name="uketones"  value="normal"> Normal
@@ -392,7 +391,7 @@
         <h4>Check all symptoms that are present (Low Glucose or Growth failure, cardiomyopathy, spasticity, or neuropathy).</h4>
         
       <input type="checkbox" name="gender" id="seizures"> Seizures<br>
-      <input type="checkbox" name="gender" id="Heart Failure"> Heart Failure<br>
+      <input type="checkbox" name="gender" id="heartFailure"> Heart Failure<br>
       <input type="checkbox" name="gender" id="retinalAbnormalities"> Retinal Abnormalities<br>
       <input type="checkbox" name="gender" id="muscleWeakness"> Muscle weakness<br>
       <input type="checkbox" name="gender" id="rhabdomyolysis">Rhabdomyolysis<br>
@@ -429,7 +428,7 @@
       <input type="checkbox" name="gender" id="liverTumors"> Liver tumors (hepatocellular carcinoma)<br>
       <input type="checkbox" name="gender" id="cognitiveDelay"> Cognitive delay<br>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onClick="rankDiseases()">
       </form>
     </div>
 </div>

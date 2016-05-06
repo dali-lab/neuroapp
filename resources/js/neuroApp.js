@@ -1,5 +1,6 @@
 var hyperammonemia = false;
 var hypoglycemia = false;
+var age = -1;
 
 $(document).ready(function(){
 	$("#firstQuestions").fadeIn();
@@ -31,6 +32,12 @@ function advanceToThirdQuestions() {
 		$('#error').delay(500).fadeIn();
 		event.preventDefault();
 	}else{
+		if ($('#age').val() == "newborn") age = 1;
+		if ($('#age').val() == "infant") age = 2;
+		if ($('#age').val() == "toddler") age = 3;
+		if ($('#age').val() == "childhood") age = 4;
+		if ($('#age').val() == "adolescent") age = 5;
+		if ($('#age').val() == "adult") age = 6;
 		$('#secondQuestions').fadeOut();
 		$('#error').fadeOut();
 		$('#thirdQuestions').delay(500).fadeIn();
@@ -84,26 +91,30 @@ function advanceToSixth() {
 }
 
 function rankDiseases() {
-
+		alert(fattyAcidOxidationDisordera());
 }
 
 function fattyAcidOxidationDisordera() {
 	rank = 0;
 
 	//Check age requirement
-		if (!($("#age").value == "toddler" || $("#age").value == "infant" || $("#age").value == "newborn")){
-		return -1;
+		if (age > 0){
+		return -2;
 	} 
 
 	//Check lab requirements
-	if (!$("#low_ketones").checked) {
+	if (!$("#low_ketones").prop("checked")) {
 		return -1;
 	}
 
 	//Add to Ranking for optionals
-	if ($("#seizures").attr('checked')){
-		rank+=1;
-	}
-
+	if ($("#seizures").attr('checked')) rank+=1;
+	if ($("#hepatomegaly").attr('checked')) rank+=1;
+	if ($("#myopathyCardiomyopathy").attr('checked')) rank+=1;
+	if ($("#heartFailure").attr('checked')) rank+=1;
+	if ($("#retinalAbnormalities").attr('checked')) rank+=1;
+	if ($("#muscleWeakness").attr('checked')) rank+=1;
+	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
+	if ($("#myoglobinuria").attr('checked')) rank+=1;
 	return rank;
 }
