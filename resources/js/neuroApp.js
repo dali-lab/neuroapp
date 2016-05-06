@@ -82,3 +82,28 @@ function advanceToSixth() {
 		event.preventDefault();
 	}
 }
+
+function rankDiseases() {
+
+}
+
+function fattyAcidOxidationDisordera() {
+	rank = 0;
+
+	//Check age requirement
+		if (!($("#age").value == "toddler" || $("#age").value == "infant" || $("#age").value == "newborn")){
+		return -1;
+	} 
+
+	//Check lab requirements
+	if (!$("#low_ketones").checked) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#seizures").attr('checked')){
+		rank+=1;
+	}
+
+	return rank;
+}
