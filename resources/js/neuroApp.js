@@ -125,4 +125,38 @@ function fattyAcidOxidationDisorder() {
 function carnitineTransporterDeficiency () {
 	rank = 0;
 	return rank;
+
+	//Check age requirement
+		if (age < 2 && !($("#hypotonia").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#low_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#myopathyCardiomyopathy").attr('checked')) rank+=1;
+	if ($("#muscleWeakness").attr('checked')) rank+=1;
+	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
+	if ($("#liverDisease").attr('checked')) rank+=1;
+	return rank;
+}
+
+function carnitineTransporterDeficiency () {
+	rank = 0;
+	return rank;
+
+	//Check age requirement
+		if (age < 2){
+		return -2;
+	} 
+
+	//Check lab requirements
+	
+
+	//Add to Ranking for optionals
+	if ($("#liverDisease").attr('checked')) rank+=1;
+	return rank;
 }
