@@ -32,13 +32,15 @@ function advanceToThirdQuestions() {
 		$('#error').delay(500).fadeIn();
 		event.preventDefault();
 	}else{
+
+		// set age
 		if ($('#age').val() == "newborn") age = 1;
 		if ($('#age').val() == "infant") age = 2;
 		if ($('#age').val() == "toddler") age = 3;
 		if ($('#age').val() == "childhood") age = 4;
 		if ($('#age').val() == "adolescent") age = 5;
 		if ($('#age').val() == "adult") age = 6;
-		alert(age)
+		
 		$('#secondQuestions').fadeOut();
 		$('#error').fadeOut();
 		$('#thirdQuestions').delay(500).fadeIn();
@@ -92,7 +94,10 @@ function advanceToSixth() {
 }
 
 function rankDiseases() {
-		alert(fattyAcidOxidationDisordera());
+		alert("Fatty Acid Oxidation Disorder: " + fattyAcidOxidationDisorder()
+			+ "\n Carnitine Transporter Deficiency: " + carnitineTransporterDeficiency()
+			+ "\n Carnitine Palmitoyl Transferase Deficiency 1: " + carnitinePalmitoylTransferaseDeficiency1()
+			+ "\n Carnitine Palmitoyl Transferase Deficiency 2: " + carnitinePalmitoylTransferaseDeficiency2());
 }
 
 function fattyAcidOxidationDisorder() {
@@ -124,7 +129,6 @@ function fattyAcidOxidationDisorder() {
 
 function carnitineTransporterDeficiency () {
 	rank = 0;
-	return rank;
 
 	//Check age requirement
 		if (age < 2 && !($("#hypotonia").attr('checked'))){
@@ -144,9 +148,8 @@ function carnitineTransporterDeficiency () {
 	return rank;
 }
 
-function carnitineTransporterDeficiency () {
+function carnitinePalmitoylTransferaseDeficiency1 () {
 	rank = 0;
-	return rank;
 
 	//Check age requirement
 		if (age < 2){
@@ -158,5 +161,27 @@ function carnitineTransporterDeficiency () {
 
 	//Add to Ranking for optionals
 	if ($("#liverDisease").attr('checked')) rank+=1;
+	return rank;
+}
+
+function carnitinePalmitoylTransferaseDeficiency2 () {
+	rank = 0;
+
+	//Check age requirement
+		if (age < 2 && !($("#hypotonia").attr('checked')) && !($("#liverDisease").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#low_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#stupor").attr('checked')) rank+=1;
+	if ($("#myopathyCardiomyopathy").attr('checked')) rank+=1;
+	if ($("#muscleWeakness").attr('checked')) rank+=1;
+	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
+	if ($("#myoglobinuria").attr('checked')) rank+=1;
 	return rank;
 }
