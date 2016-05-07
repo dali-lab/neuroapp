@@ -93,13 +93,6 @@ function advanceToSixth() {
 	}
 }
 
-function rankDiseases() {
-		alert("Fatty Acid Oxidation Disorder: " + fattyAcidOxidationDisorder()
-			+ "\n Carnitine Transporter Deficiency: " + carnitineTransporterDeficiency()
-			+ "\n Carnitine Palmitoyl Transferase Deficiency 1: " + carnitinePalmitoylTransferaseDeficiency1()
-			+ "\n Carnitine Palmitoyl Transferase Deficiency 2: " + carnitinePalmitoylTransferaseDeficiency2());
-}
-
 function fattyAcidOxidationDisorder() {
 	rank = 0;
 
@@ -184,4 +177,170 @@ function carnitinePalmitoylTransferaseDeficiency2 () {
 	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
 	if ($("#myoglobinuria").attr('checked')) rank+=1;
 	return rank;
+}
+
+function mildCarnitinePalmitoylTransferaseDeficiency2 () {
+	rank = 0;
+
+	//Check age requirement
+		if (age < 5 && !($("#muscleWeakness").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#low_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
+	if ($("#myoglobinuria").attr('checked')) rank+=1;
+	return rank;
+}
+
+function carnitineTranslocaseDeficiency () {
+	rank = 0;
+
+	//Check age requirement
+		if (age < 2 && !($("#myopathyCardiomyopathy").attr('checked')) && 
+			!($("#muscleWeakness").attr('checked')) && !($("#liverDisease").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#low_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#rhabdomyolysis").attr('checked')) rank+=1;
+	if ($("#myoglobinuria").attr('checked')) rank+=1;
+	if ($("#cardiacDysrhythmia").attr('checked')) rank+=1;
+	return rank;
+}
+
+
+function organicAcidemias () {
+	rank = 0;
+
+	//Check age requirement
+	if (age < 2){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#high_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($('#coma').val() == "yes") rank+=1;
+	if ($("#reyeSyndrome").attr('checked')) rank+=1;
+	if ($("#myopathyCardiomyopathy").attr('checked')) rank+=1;
+	if ($("#liverDisease").attr('checked')) rank+=1;
+	if ($("#hypotonia").attr('checked')) rank+=1;
+	if ($("#seizures").attr('checked')) rank+=1;
+	if ($("#convulsions").attr('checked')) rank+=1;
+	if ($("#spasticity").attr('checked')) rank+=1;
+	if ($("#abnormalInvoluntaryMovements").attr('checked')) rank+=1;
+
+	//optional lab tests
+	if ($("#high_lactic").prop("checked")) rank+=1;
+	if ($("#high_ammonia").prop("checked")) rank+=1;
+	if ($("#brainAtrophy").attr('checked')) rank+=1;
+	return rank;
+}
+
+function ketogenesisDisorders () {
+	rank = 0;
+
+	//Check age requirement
+		if (age < 1){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!$("#low_ketones").prop("checked")) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($("#seizures").attr('checked')) rank+=1;
+	return rank;
+}
+
+function fructose16BisphosphataseDeficiency () {
+
+	//Check age requirement
+	if (age < 1 && !($("#hepatomegaly").attr('checked')) && 
+			!($("#hyperventilation").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#high_ketones").prop("checked"))) {
+		return -1;
+	}
+
+	//Add to Ranking for optionals
+	if ($('#coma').val() == "yes") rank+=1;
+	if ($("#seizures").attr('checked')) rank+=1;
+	if ($("#convulsions").attr('checked')) rank+=1;
+
+	//optional lab tests
+	if ($("#brainAtrophy").attr('checked')) rank+=1;
+
+	return rank;
+}
+
+function congenitalDisordersOfGlycoproteinSynthesis () {
+
+	//Check age requirement
+	if (age < 1 && !($("#hypotonia").attr('checked')) && 
+			!($("#muscleWeakness").attr('checked'))){
+		return -2;
+	} 
+
+	//Check lab requirements
+	if (!($("#low_ketones").prop("checked"))) {
+		return -1;
+	}	
+
+	//Add to Ranking for optionals
+	if ($("#seizures").attr('checked')) rank+=1;
+	if ($("#convulsions").attr('checked')) rank+=1;
+	if ($("#cerebralAtrophy").attr('checked')) rank+=1;
+	if ($("#cerebrallarAtrophy").attr('checked')) rank+=1;
+	if ($("#retinalPallor").attr('checked')) rank+=1;
+	return rank;
+
+}
+
+function hypopituitarism() {
+
+	//Check lab requirements
+	if (!($("#high_ketones").prop("checked"))) {
+		return -1;
+	}	
+
+	//Add to Ranking for optionals
+	if ($("#stupor").attr('checked')) rank+=1;
+	if ($("#seizures").attr('checked')) rank+=1;
+	if ($("#poorTemperatureRegulation").attr('checked')) rank+=1;
+	if ($("#lowBloodPressure").attr('checked')) rank+=1;
+	if ($("#smallBodySize").attr('checked')) rank+=1;
+	return rank;
+}
+
+function rankDiseases() {
+	alert("Fatty Acid Oxidation Disorder: " + fattyAcidOxidationDisorder()
+		+ "\nCarnitine Transporter Deficiency: " + carnitineTransporterDeficiency()
+		+ "\nCarnitine Palmitoyl Transferase Deficiency 1: " + carnitinePalmitoylTransferaseDeficiency1()
+		+ "\nCarnitine Palmitoyl Transferase Deficiency 2: " + carnitinePalmitoylTransferaseDeficiency2()
+		+ "\nMild Carnitine Palmitoyl Transferase Deficiency 2: " + mildCarnitinePalmitoylTransferaseDeficiency2()
+		+ "\nCarnitine Translocase Deficiency: "+ carnitineTranslocaseDeficiency()
+		+ "\nOrganic Acidemias: " + organicAcidemias() + "\nKetogenesis Disorders: " + ketogenesisDisorders()
+		+ "\nFructose 1,6 Bisphosphatase Deficiency: " + fructose16BisphosphataseDeficiency()
+		+ "\nCongenital Disorders of Glycoprotein Synthesis: " + congenitalDisordersOfGlycoproteinSynthesis()
+		+ "\nHypopituitarism: " + hypopituitarism());
 }
