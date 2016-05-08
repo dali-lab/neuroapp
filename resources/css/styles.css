@@ -59,6 +59,7 @@ a:hover:not(.active) {
 #main h1 {
     margin-top: 0;
     font-size: 35px;
+    color:#1D9F7D;
 }
 
 #main ul {
