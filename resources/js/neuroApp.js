@@ -3,11 +3,17 @@ var hypoglycemia = false;
 var age = -1;
 
 $(document).ready(function(){
-	$("#firstQuestions").fadeIn();
+	// $("#firstQuestions").fadeIn();
 	$('.notFirst').hide();
 	console.log("hi");
 	event.preventDefault();
 });
+
+function firstQuestions() {
+	$('#coverPage').fadeOut();
+	$("#firstQuestions").delay(500).fadeIn();
+	event.preventDefault();
+}
 
 function checkIfApplicable() {
 	$('#firstQuestions').fadeOut();
