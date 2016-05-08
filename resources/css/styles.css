@@ -41,7 +41,7 @@ a:hover:not(.active) {
 }
 
 .active {
-    background-color:#1D9F7D;
+    background-color:#111;
 }
 
 #main {
