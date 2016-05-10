@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 function firstQuestions() {
 	$('#coverPage').fadeOut();
+	$('#endPage').fadeOut();
 	$("#firstQuestions").delay(500).fadeIn();
 	event.preventDefault();
 }
@@ -72,14 +73,16 @@ function advanceToFourthQuestions() {
 		hypoglycemia = true;
 		hyperammonemia = true;
 	}
+
+	$('#thirdQuestions').fadeOut();
 	if ($("#coma").val() == "yes"){
-		$('#thirdQuestions').fadeOut();
 		$('#fourthQuestions').delay(500).fadeIn();
 		event.preventDefault();
 	} else if (hypoglycemia === true) {
-		$('#thirdQuestions').fadeOut();
 		$('#fifthQuestions').delay(500).fadeIn();
 		event.preventDefault();
+	} else {
+		endTest()
 	}
 }
 
@@ -97,6 +100,11 @@ function advanceToSixth() {
 		$('#sixthQuestions').delay(500).fadeIn();
 		event.preventDefault();
 	}
+}
+
+function endTest() {
+	$('#endPage').delay(500).fadeIn();
+	event.preventDefault();
 }
 
 function fattyAcidOxidationDisorder() {
@@ -359,4 +367,6 @@ function rankDiseases() {
 		+ "\nFructose 1,6 Bisphosphatase Deficiency: " + fructose16BisphosphataseDeficiency()
 		+ "\nCongenital Disorders of Glycoprotein Synthesis: " + congenitalDisordersOfGlycoproteinSynthesis()
 		+ "\nHypopituitarism: " + hypopituitarism());
+	$('.notFirst').hide();
+	endTest();
 }
