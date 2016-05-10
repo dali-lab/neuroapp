@@ -108,7 +108,8 @@ function fattyAcidOxidationDisorder() {
 	} 
 
 	//Check lab requirements
-	if (!$("#low_ketones").prop("checked")) {
+	if (!$("#low_ketones").prop("checked") || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -135,7 +136,8 @@ function carnitineTransporterDeficiency () {
 	} 
 
 	//Check lab requirements
-	if (!($("#low_ketones").prop("checked"))) {
+	if (!($("#low_ketones").prop("checked")) ||
+	 !($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -172,7 +174,8 @@ function carnitinePalmitoylTransferaseDeficiency2 () {
 	} 
 
 	//Check lab requirements
-	if (!($("#low_ketones").prop("checked"))) {
+	if (!($("#low_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -194,7 +197,8 @@ function mildCarnitinePalmitoylTransferaseDeficiency2 () {
 	} 
 
 	//Check lab requirements
-	if (!($("#low_ketones").prop("checked"))) {
+	if (!($("#low_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -214,7 +218,8 @@ function carnitineTranslocaseDeficiency () {
 	} 
 
 	//Check lab requirements
-	if (!($("#low_ketones").prop("checked"))) {
+	if (!($("#low_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -235,7 +240,8 @@ function organicAcidemias () {
 	} 
 
 	//Check lab requirements
-	if (!($("#high_ketones").prop("checked"))) {
+	if (!($("#high_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -266,7 +272,8 @@ function ketogenesisDisorders () {
 	} 
 
 	//Check lab requirements
-	if (!$("#low_ketones").prop("checked")) {
+	if (!($("#low_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -284,7 +291,8 @@ function fructose16BisphosphataseDeficiency () {
 	} 
 
 	//Check lab requirements
-	if (!($("#high_ketones").prop("checked"))) {
+	if (!($("#high_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}
 
@@ -308,7 +316,8 @@ function congenitalDisordersOfGlycoproteinSynthesis () {
 	} 
 
 	//Check lab requirements
-	if (!($("#low_ketones").prop("checked"))) {
+	if (!($("#low_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}	
 
@@ -325,7 +334,8 @@ function congenitalDisordersOfGlycoproteinSynthesis () {
 function hypopituitarism() {
 
 	//Check lab requirements
-	if (!($("#high_ketones").prop("checked"))) {
+	if (!($("#high_ketones").prop("checked")) || 
+		!($("#incomplete_ketones").prop("checked"))) {
 		return -1;
 	}	
 
