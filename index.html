@@ -21,9 +21,18 @@
       </ul>
     </div>
   </nav>
-        
+
+  <div id="whitebox"></div>
 
   <div id="main">
+    
+    <div id="myProgress">
+      <div id="myBar">
+        <div id="label"></div>
+      </div>
+    </div>
+
+
     <div id="header">
       <h1>Generva</h1>
     </div>
@@ -31,7 +40,7 @@
     <div id="coverPage">
         <h3>Generva is an app for medical professions to expedite their diagnostic process for neurometabolic diseases.</h3>
           <form action="" method="get" >
-            <input type="submit" value="Begin" onClick="firstQuestions()">
+            <input type="submit" value="Click to Begin" onClick="firstQuestions()">
         </form>
     </div>
 
@@ -44,8 +53,7 @@
 
     <div id="firstQuestions" class="notFirst">
 
-        <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>
-    
+        <h3>WARNING: Common etiologies are trauma, infection, inflammation, malignancy, infarction, hemorrhage, or toxin/drug adverse reaction.  Given that the more common disorders are more probable by definition, it is efficient, and therefore prudent, to pursue common disorders first, and exclude them if they are not present.</h3>    
 
           <form action="" method="get" >
             <h4>Does the patient warrant neurometabolic diagnostic evaluation?</h4>
@@ -55,7 +63,8 @@
         </form>
     </div>
 
-    <div id="notApplicable" class="notFirst">
+   <div id="notApplicable" class="notFirst">
+
       <h3>Given your answers, we advise against taking this test.</h3>
       <form>
       <input type="button" value="Continue" onClick="advanceToSecondQuestions()">
@@ -70,6 +79,7 @@
     </div>
 
     <div id="secondQuestions" class="notFirst">
+      
       <form action="" method="get">
         <h4>Please enter the patient's age.</h4>
         <select id="age" name="age">
@@ -100,7 +110,7 @@
     <font color="black"></color>
 
     <div id="thirdQuestions" class="notFirst">
-      
+
       <form action="" method="get">
         <h4>Check all that apply.</h4>
         <input type="checkbox" name="gender" id="absentCorpusCallosum"> Absent Corpus Callosum<br>
@@ -146,6 +156,7 @@
     </div>
 
     <div id="fourthQuestions" class="notFirst">
+
         <div>
       <form action="" method="get">
         <h4>Check all symptoms that are present (Coma).</h4>
@@ -410,6 +421,7 @@
   </div>
 
   <div class="notFirst" id="sixthQuestions">
+
       <form action="" method="get">
         <h4>Check all symptoms that are present (Low Glucose or Growth failure, cardiomyopathy, spasticity, or neuropathy).</h4>
         
@@ -454,6 +466,7 @@
         <input type="submit" value="Submit" onClick="rankDiseases()">
       </form>
     </div>
+
 </div>
 </body>
 

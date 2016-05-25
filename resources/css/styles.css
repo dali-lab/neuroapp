@@ -16,6 +16,41 @@ body {
 
 }
 
+#whitebox {
+  position: fixed;
+  top: 100;
+  left: 0;
+  z-index: 8000;
+  width: 100%;
+  height: 85px;
+  background-color: #fff;
+
+}
+
+#myProgress {
+  top: 50px;  
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+#myBar {
+  position: absolute;
+  height: 100%;
+  background-color: #1D9F7D;
+  opacity: 0.3;
+}
+
+#label {
+  text-align: right;
+  font-family: Avenir, sans-serif;
+  line-height: 30px;
+  color: white;
+}
+
 .nav-wrapper ul {
     list-style-type: none;
     margin: 0;
@@ -49,7 +84,7 @@ a:hover:not(.active) {
     margin: auto;
     text-align: left;
     background: white;
-    padding: 50px 60px;
+    padding: 80px 60px;
     border: solid white;
     border-width: 0 1px 1px 1px;
     font-family: Avenir, sans-serif; 
@@ -64,6 +99,11 @@ a:hover:not(.active) {
 
 #main ul {
     padding-left: 20px;
+}
+
+#aboutContent h3, #coverPage h3 {
+    font-family: Avenir, sans-serif;
+    font-weight: 200;
 }
 
 #main .error {

@@ -3,13 +3,14 @@ var hypoglycemia = false;
 var age = -1;
 
 $(document).ready(function(){
-	// $("#firstQuestions").fadeIn();
+	$("#firstQuestions").fadeIn();
 	$('.notFirst').hide();
 	console.log("hi");
 	event.preventDefault();
 });
 
 function firstQuestions() {
+	$("#myBar").width(100);
 	$('#coverPage').fadeOut();
 	$('#endPage').fadeOut();
 	$("#firstQuestions").delay(500).fadeIn();
@@ -28,6 +29,7 @@ function checkIfApplicable() {
 }
 
 function advanceToSecondQuestions() {
+	$("#myBar").width(200);
 	$('#applicable').fadeOut();
 	$('#notApplicable').fadeOut();
 	$('#secondQuestions').delay(500).fadeIn();
@@ -35,6 +37,7 @@ function advanceToSecondQuestions() {
 }
 
 function advanceToThirdQuestions() {
+	$("#myBar").width(300);
 	if ($('#age').val() == "none" || $('#sex').val() == "none"){
 		$('#error').delay(500).fadeIn();
 		event.preventDefault();
@@ -53,9 +56,11 @@ function advanceToThirdQuestions() {
 		$('#thirdQuestions').delay(500).fadeIn();
 		event.preventDefault();
 	}
+
 }
 
 function advanceToFourthQuestions() {
+	$("#myBar").width(400);
 	if ($("#growthFailure").attr('checked')){
 		hyperammonemia = true;
 		hypoglycemia = true;
@@ -95,6 +100,7 @@ function advanceToFourthFromComa() {
 }
 
 function advanceToSixth() {
+	$("#myBar").width(600);
 	if (hypoglycemia === true) {
 		$('#fifthQuestions').fadeOut();
 		$('#sixthQuestions').delay(500).fadeIn();
@@ -103,6 +109,7 @@ function advanceToSixth() {
 }
 
 function endTest() {
+	$("#myBar").width(900);
 	$('#endPage').delay(500).fadeIn();
 	event.preventDefault();
 }
